@@ -1,0 +1,22 @@
+#item:checked + label {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.compliment {
+  display: none;
+  visibility: hidden;
+}
+
+#item:checked ~ .compliment {
+  display: inline-block;
+  visibility: visible;
+  color: coral;
+}
+
+.container {
+  margin-left: auto;
+}
+
+label {
+  margin: 0 1rem 0 0.5rem;
+}

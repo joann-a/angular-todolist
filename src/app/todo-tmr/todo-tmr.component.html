@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Tomorrow's Tasks</h1>
+  <ul>
+    <li *ngFor="let todo of todolist">
+      <input type="checkbox" name="item" />
+      <label for="item">{{ todo.desc }}</label>
+    </li>
+  </ul>
+
+  <div>
+    <input #todoDesc placeholder="Add a task!" />
+    <button (click)="add(todoDesc.value); todoDesc.value = ''">add</button>
+  </div>
+
+  <button>Clear list</button>
+</div>
