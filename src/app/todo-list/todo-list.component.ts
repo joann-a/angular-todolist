@@ -40,6 +40,10 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+  onClear() {
+    this.todolist = [];
+  }
+
   /*  debug(id: number) {
     console.log(this.checkboxFlag);
     this.todolist.forEach((i) => {

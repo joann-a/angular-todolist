@@ -7,11 +7,13 @@ import { TodoItem } from '../_models/todo-item';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const todolist = [
-      { id: 1, desc: 'eat apple', duration: 11 },
-      { id: 2, desc: 'eat orange', duration: 5 },
-      { id: 3, desc: 'eat watermelon', duration: 10 },
-    ];
+    const todolist = [];
     return { todolist };
+  }
+
+  genId(todolist: TodoItem[]): number {
+    return todolist.length > 0
+      ? Math.max(...todolist.map((todo) => todo.id)) + 1
+      : 11;
   }
 }

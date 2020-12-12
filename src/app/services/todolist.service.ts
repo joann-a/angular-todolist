@@ -21,7 +21,7 @@ export class TodolistService {
 
   addTodo(todo: TodoItem): Observable<TodoItem> {
     return this.http
-      .post(this.todoUrl, todo, this.httpOptions)
+      .post(this.todoUrl, todo)
       .pipe(catchError(this.handleError<any>('addHero')));
   }
 

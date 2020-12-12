@@ -6,6 +6,7 @@ import { TodoTmrComponent } from './todo-tmr/todo-tmr.component';
 const routes: Routes = [
   { path: 'todolist', component: TodoListComponent },
   { path: 'todo_tmr', component: TodoTmrComponent },
+  { path: '', component: TodoListComponent },
 ];
 
 @NgModule({
